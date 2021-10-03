@@ -72,6 +72,7 @@ export default defineComponent({
   components: {
     ScrollPane
   },
+  name: 'TagsView',
   setup() {
     const store = useStore()
     const router = useRouter()

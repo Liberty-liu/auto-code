@@ -14,14 +14,13 @@ constantFiles.keys().forEach((key) => {
   if (key === './index.ts') return
   constantModules = constantModules.concat(constantFiles(key).default)
 })
-
 const asyncFiles = require.context('./permissionModules', true, /\.ts$/)
 let permissionModules: Array<RouteRecordRaw> = []
 asyncFiles.keys().forEach((key) => {
   if (key === './index.ts') return
   permissionModules = permissionModules.concat(asyncFiles(key).default)
 })
-
+console.log(permissionModules)
 export const constantRoutes: Array<RouteRecordRaw> = [
   {
     path: '/redirect',

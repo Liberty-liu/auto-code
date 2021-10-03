@@ -62,7 +62,7 @@ export default defineComponent({
   }
 })
 // import { Component, Prop, Vue } from 'vue-property-decorator'
-// import { IProfile } from '../index.vue'
+// import { IProfile } from '../Index.vue'
 // export default class extends Vue {
 //   @Prop({ required: true }) private user!: IProfile
 

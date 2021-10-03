@@ -44,7 +44,7 @@ router.beforeEach(async(to: RouteLocationNormalized, _: RouteLocationNormalized,
       // Check whether the user has obtained his permission roles
       if (store.state.user.roles.length === 0) {
         try {
-          // Note: roles must be a object array! such as: ['admin'] or ['developer', 'editor']
+          // Note: roles must be a form-builder array! such as: ['admin'] or ['developer', 'editor']
           await store.dispatch(UserActionTypes.ACTION_GET_USER_INFO, undefined)
           const roles = store.state.user.roles
           // Generate accessible routes map based on role
